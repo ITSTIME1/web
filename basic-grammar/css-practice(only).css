@@ -1,0 +1,14 @@
+h1 {
+    color: royalblue;
+}
+
+p {
+    font-size: large;
+    color:aquamarine;
+}
+
+p, li {
+    font: optional;
+    color: blue;
+    
+}
