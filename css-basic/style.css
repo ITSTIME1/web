@@ -40,3 +40,43 @@ a:hover {
     font-size: 150%;
 }
 
+
+.outer {
+    border: 10px solid black;
+}
+  
+.box {
+    padding: 20px;
+    width: calc(20% - 20px);
+    background-color: rebeccapurple;
+    color: white;
+  }
+
+.rotate_box {
+    margin: 50px;
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+    transform: rotate(1.7turn);
+}
+
+body {
+    background-color: pink;
+  }
+  
+  @media (min-width: 30em) {
+    body {
+      background-color: beige;
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .small-tomato {
+      background-color: tomato;
+    }
+  }
+  @media (min-width: 800px) {
+    .small-tomato {
+      background-color: tomato;
+    }
+  }
