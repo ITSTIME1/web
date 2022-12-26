@@ -1,0 +1,42 @@
+
+body {
+    color: black;
+}
+
+h1 {
+    color: red;
+}
+
+
+
+li.special,
+span.special {
+  color: orange;
+  font-weight: bold;
+}
+
+
+li em {
+    color: rebeccapurple;
+}
+
+em {
+    color:aqua;
+}
+
+h1 + p {
+    font-size: 150%;
+}
+
+a:link {
+    color:pink;
+}
+
+a:visited {
+    color: green;
+}
+a:hover {
+    text-decoration: none;
+    font-size: 150%;
+}
+
