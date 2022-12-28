@@ -80,3 +80,26 @@ body {
       background-color: tomato;
     }
   }
+
+
+  h1, .special {
+    color: blue;
+  }
+
+#unique {
+
+}
+
+a[title] {
+
+}
+
+a[href="https://example.com"] { }
+
+a:hover {
+
+}
+
+article > p {
+  
+}

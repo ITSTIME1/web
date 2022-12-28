@@ -1,0 +1,28 @@
+body {
+    width: 950px;
+}
+
+#header {
+    background: #ffff99;
+    height: 100px;
+}
+
+#sidebar {
+    background: #99ff99;
+    float: right;
+    width: 200px;
+    height: 600px;
+}
+
+#maincontent {
+    background: #9999ff;
+    height:400px;
+}
+
+/* float가 적용된 요소의 다음 요소가 float의 영향을 받아 배치될지, 아니면 float의 영향에서 해제(clear)되어 배치될지를 제어하는 것이 clear 속성의 역할이다. */
+/* float가 여러개 지정되어 있고, clear:both를 하면, height가 가장 큰 float에 밑으로 다음 요소가 배치된다. */
+#footer {
+    background: #ffcc99;
+    height: 200px;
+    clear: left;
+}
