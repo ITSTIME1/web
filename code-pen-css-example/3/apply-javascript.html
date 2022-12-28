@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Apply JavaScript example</title>
+    <!-- 이렇게 HTMl 페이지 내에서도 script 가 가능하다 하지만 이런 방법은 HTML, JS 코드가 섞이기 때문에 코드를 읽어내려가는게 불편하므로-->
+    <!-- 이러한 방법을 지향하지 않는게 좋을것 같다 -->
+    <!-- 그럼 외부의 js 파일을 적용하고 싶다면 -->
+    <script src="script.js(js파일의 name)" defer></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // 문장을 document 문서를 클릭했을 때 나타나게 끔 하는 함수
+            function createParagraph() {
+                const para = document.createElement("p");
+                para.textContent = "You clicked the button";
+                document.body.appendChild(para);
+            }
+            const buttons = document.querySelectorAll('button');
+
+            for (const button of buttons) {
+                button.addEventListener('click', createParagraph);
+            }
+        })
+    </script>
+
+  </head>
+  <body id="oldBodyElement">
+    <button>Click me</button>
+
+    <div id="foo\bar"></div>
+    <div id="foo:bar"></div>
+  </body>
+</html>

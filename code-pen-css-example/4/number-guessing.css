@@ -1,0 +1,21 @@
+html {
+    font-family: sans-serif;
+}
+body {
+    width: 50%;
+    max-width: 800px;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: rebeccapurple;
+}
+
+.form input[type="number"] {
+    width: 300px;
+}
+.lastResult {
+    color: white;
+    padding: 3px;
+}
