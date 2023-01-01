@@ -1,0 +1,164 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: linear-gradient(#141e30, #243b55);
+}
+
+h1 {
+    color: white;
+}
+
+.login-box{
+    /* position 속성은 해당 스타일의 위치를 결정할 때 사용하게 되는 속성.
+    position 의 default value = static 문서의 기본 흐름에 맞춰져 있다.
+    여러가지 값들이 있는데 static을 제외하고 나머지 속성들을 사용한다면
+    top, left, right, bottom 등을 사용할 수 있다.
+    
+    그 중 relative 는 위치를 상대적으로 지정시킬 수 있는 속성인데 
+    static 기본값을 기준으로 top : 5px left: 5px 라면
+    기본 위치가 50px, 30px 라고 했을때의 기준으로 
+    55px, 35px 기준으로 떨어지게끔 상대적으로 위치를 계산해준다.
+
+    */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    /* translate 는 transform 의 한 속성으로 요소를 x, y축으로 이동 시킬때 사용하는 속성이다.
+    즉 x로 얼만큼 y로 얼만큼 이동할지를 정한다고 보면 된다.
+    만약 x, y 둘 중 하나의 값만 적용하고자 한다면
+    translateX, translateY 값만 따로 적용할 수 있다.
+
+    */
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, .3);
+    /* box-sizing 속성은 어떤 기준으로 박스의 크기를 계산할지 정하는 속성이다.
+    border-box, content-box, initial, inherit 등이 있는데
+    border-box = 테두리를 기준으로 계산한다.
+    content-box = 컨텐트 속성을 기준으로 계산한다.
+    initial = 기본값으로 계산한다.
+    inherit = 부모 요소의 상속값을 받는다.
+    */
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+}
+
+/* login-box 의 h1 속성 값 */
+.login-box h1 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+.login-box h1:hover {
+    transform: translate(5%, 6%);
+}
+
+.login-box .user-box {
+    position: relative;
+}
+
+.login-box .user-box input {
+    width: 100%;
+    padding: 20px 0;
+    font-size: 12px;
+    color: #fff;
+    margin-bottom: 34px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.login-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 14px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -22px;
+  left: 0;
+  color: #7df9ff;
+  font-size: 12px;
+}
+
+.login-box form a {
+    position: relative;
+    left: 80%;
+    display: inline-block;
+    padding: 10px;
+    color: #03e9f4;
+    font-size: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 10px;
+    letter-spacing: 2x;
+}
+
+.login-box a:hover {
+    background: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    /* box-shadow 값을 여러가지로 설정해서 shadow 효과를 준다. */
+    box-shadow: 0 0 5px #03e9f4,
+              0 0 25px #4beef6,
+              0 0 50px #397f83,
+              0 0 100px #8b8b8b;
+
+}
+
+.login-box a span {
+    position: absolute;
+    display: block;
+}
+
+.login-box a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: btn-anim1 1s linear infinite;
+}
+
+/* nth-child(1) 의사결정을 할때 순서의 따라 요소를 선택하는 요소
+An+B 번째 요소를 선택할 수도 있고
+odd
+even
+
+값으로 선택하는게 달라진다.*/
+.login-box a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 0.3px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    /* animation을 준다 keyframe */
+    animation: btn-anim1 3s linear infinite;
+  }
+  
+  @keyframes btn-anim1 {
+    0% {
+      left: -100%;
+    }
+    50%,100% {
+      left: 100%;
+    }
+  }
+  
