@@ -152,7 +152,12 @@ even
     /* animation을 준다 keyframe */
     animation: btn-anim1 3s linear infinite;
   }
-  
+
+  /* keyframe 은 일반적인 transition 보다 더 많은 컨트롤을 할 수 있도록 제공해준다.
+  예를들어, from to 까지 가는데 변화를 주는것들을 중간중간 프레임들을 나눠서
+  설정해줄 수 있다.
+  keyframe > transition 보다 더 세밀하게 조정할 수 있다.
+  */
   @keyframes btn-anim1 {
     0% {
       left: -100%;
