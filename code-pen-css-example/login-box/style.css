@@ -93,7 +93,7 @@ h1 {
   top: -22px;
   left: 0;
   color: #7df9ff;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .login-box form a {
@@ -112,7 +112,7 @@ h1 {
 }
 
 .login-box a:hover {
-    background: #03e9f4;
+    background: #53fff4;
     color: #fff;
     border-radius: 5px;
     /* box-shadow 값을 여러가지로 설정해서 shadow 효과를 준다. */
@@ -134,8 +134,17 @@ h1 {
     width: 100%;
     height: 2px;
     background: linear-gradient(90deg, transparent, #03e9f4);
-    animation: btn-anim1 1s linear infinite;
+    animation: btn-anim1 4s linear infinite;
 }
+.login-box a span:nth-child(2) {
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: btn-anim1 4s linear infinite;
+}
+
 
 /* nth-child(1) 의사결정을 할때 순서의 따라 요소를 선택하는 요소
 An+B 번째 요소를 선택할 수도 있고
@@ -143,27 +152,24 @@ odd
 even
 
 값으로 선택하는게 달라진다.*/
-.login-box a span:nth-child(1) {
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 0.3px;
-    background: linear-gradient(90deg, transparent, #03e9f4);
-    /* animation을 준다 keyframe */
-    animation: btn-anim1 3s linear infinite;
-  }
 
   /* keyframe 은 일반적인 transition 보다 더 많은 컨트롤을 할 수 있도록 제공해준다.
   예를들어, from to 까지 가는데 변화를 주는것들을 중간중간 프레임들을 나눠서
   설정해줄 수 있다.
   keyframe > transition 보다 더 세밀하게 조정할 수 있다.
   */
-  @keyframes btn-anim1 {
-    0% {
-      left: -100%;
-    }
-    50%,100% {
-      left: 100%;
-    }
-  }
+@keyframes btn-anim1 {
+0% {
+    left: -100%;
+}
+50% {
+    left: 50%;
+}
+70% {
+    left : 70%
+}
+100% {
+    left : 100%
+}
+}
   
