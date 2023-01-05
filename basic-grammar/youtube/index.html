@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <script src="https://kit.fontawesome.com/509b43f874.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="youtube/style.css">
+    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Youtube</title>
 </head>
@@ -42,17 +42,16 @@
                 </button>
             </div>
             <!-- 3 -->
-            <div class="viewsAndmonth">
-                <span class="views">1M views 1 month</span>
+            <span class="views">1M views 1 month ago</span>
             </div>
         </div>
         <div class="action">
             <li><button>
-                <i class="fas fa-thumbs-up"></i>
+                <i class="active fas fa-thumbs-up"></i>
                 <span>1K</span>
             </button></li>
             <li><button>
-                <i class="fas fa-thumbs-down"></i>
+                <i class="active fas fa-thumbs-down"></i>
                 <span>0</span>
             </button></li>
             <li><button>
@@ -64,11 +63,12 @@
                 <span>Save</span>
             </button></li>
             <li><button>
-                <i class="fas fa-font-awesome-flag"></i>
+                <i class="fab fa-font-awesome-flag"></i>
                 <span>Report</span>
             </button></li>
         </div>
-        <div class="channel info">
+        <!-- 여기서부터 다시 시작 -->
+        <div class="channel">
             <div class="metadata">
                 <!-- Image -->
                 <div class="info">
@@ -80,6 +80,8 @@
             <button class="subscribe">Subscribe</button>
         </div>
     </section>
+
+    <!-- Video list -->
     <section class="upNext">
         <span class="title">Up Next</span>
         <ul>
@@ -100,8 +102,40 @@
                     <i class="fas fa-ellipsis-v"></i>
                 </button>
             </li>
-            <li class="item"></li>
-            <li class="item"></li>
+            <li class="item">
+                <img src="" alt="">
+                <div class="info">
+                    <span class="title">
+                        The 26 Biggest Future
+                    </span>
+                    <span class="name">
+                        TechMagelanic
+                    </span>
+                    <span class="views">
+                        2.1M 1month ago
+                    </span>
+                </div>
+                <button class="moreButton">
+                    <i class="fas fa-ellipsis-v"></i>
+                </button>
+            </li>
+            <li class="item">
+                <img src="" alt="">
+                <div class="info">
+                    <span class="title">
+                        The 26 Biggest Future
+                    </span>
+                    <span class="name">
+                        TechMagelanic
+                    </span>
+                    <span class="views">
+                        2.1M 1month ago
+                    </span>
+                </div>
+                <button class="moreButton">
+                    <i class="fas fa-ellipsis-v"></i>
+                </button>
+            </li>
         </ul>
     </section>
 </body>

@@ -1,0 +1,159 @@
+:root {
+    /* 각각 따로 정의하지 말고 이렇게 자주 사용하는 변수들 혹은 사이즈, 폰트크기 같은 것들은
+        따로 이렇게 미리 정의해두어서 그때그때 사용할 수 있도록 만들어두면 편리함.
+        즉 한마디로 전역변수를 사용할 때 유용하다고 말할 수 있다.
+    */
+
+    /* Color */
+    --white-color: #fff;
+    --black-color: #140a00;
+    --blue-color: #045fd4;
+    --red-color: #ff0000;
+    --grey-dark-color: #909090;
+    --grey-light-color: #e0e0e0;
+    
+
+    /* Size */
+    --padding: 12px;
+    --avatar-size: 36px;
+
+
+    /* Font Size */
+    --font-large: 18px;
+    --font-medium: 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
+}   
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+header {
+    /* 화면의 요소들을 어떻게 배치할지 정하는 속성 여러 속성들이 있으며
+        1. none = 보이지 않는 속성 visibility: hidden 으로 바꾼 것과 달리 영역을 차지 않는다는 차이점이 존재.
+        2. block = block은 block이 있는 다음 태그는 무조건 다음행의 표시하게하는 태그
+        3. inline = 줄바꿈이 되지 않고 크기를 지정하지 못함
+        4. inline-block = 크기를 지정할 수 있으며, 줄바꿈이 되지 않는 속성
+        5. flex = 요소들을 가로로 배치하는 속성.
+    */
+    display: flex;
+
+    /* 요소들간의 space를 어떻게 정의할지 나타내는 속성 */
+    justify-content: space-between;
+    padding: var(--padding);
+    background-color: var(--black-color);
+    color: var(--white-color)
+}
+
+header .logo {
+    font-size: var(--font-large);
+}
+header .logo i {
+    color: var(--red-color)
+}
+
+header .logo .title {
+    font-size: var(--font-large);
+    color:var(--white-color)
+}
+
+header .icons {
+    margin-right: var(--padding);
+}
+
+.player {
+
+    background-color: var(--black-color);
+    text-align: center;
+}
+
+.player video {
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+}
+
+.info {
+    padding: var(--padding);
+}
+
+.info .metadata .hashtags {
+    display: flex;
+    list-style: none;
+    font-size: var(--font-small);
+    color: var(--blue-color);
+}
+
+.info .metadata .hashtags li {
+    margin-right: var(--padding);
+    margin-bottom: var(--padding);
+}
+
+.info .metadata .titleAndButton {
+    display: flex;
+}
+
+.info .metadata .titleAndButton .title {
+    font-size: var(--font-medium);
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    margin-right: var(--padding);
+}
+
+
+.info .metadata .titleAndButton .moreButton {
+    height: 100%;
+}
+
+.info .views {
+    font-size: var(--font-small);
+    color: var(--grey-dark-color);
+}
+
+button, button:focus {
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.action {
+    display: flex;
+    justify-content: space-around;
+    margin: var(--padding) 0;
+}
+
+.action button {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-medium);
+    color: var(--black-color);
+}
+.action button i {
+    margin: 0 auto;
+    margin-bottom: calc(var(--padding) / 2);
+    font-size: 16px;
+}
+
+.action li {
+    list-style: none;
+}
+
+.action button i.active {
+    color: var(--blue-color);
+}
+
+
+.channel {
+    display: flex;
+}
+.channel .metadata {
+    display: flex;
+}
