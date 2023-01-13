@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 인코딩 방법 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice</title>
+</head>
+<body>
+    <!-- 개인정보 입력 1 -->
+    <form>
+        <fieldset>
+            <legend>개인 정보 입력</legend>
+                이름 : <input type="text" name="name" required/><br><br>
+                주민번호 : <input type="text" name = "security_number" pattern = "\d{6}\-\d{7}" title = "123456-123456 형식으로 입력해주세요."/><br><br>
+                아이디 : <input type="text" name = "id"/><br><br>
+                
+                성별: 남<input type="radio" name="gender"/> 여 <input type="radio" name="gender"/><br><br>
+                관심사: 연애<input type="checkbox">
+                <input type="submit"/>
+                <input type="reset"/>
+            </fieldset>
+
+    </form>
+
+    <br><br>
+    <!-- 개인정보 입력 2 -->
+    <form>
+        <!-- select 태그는 항목을 선택할 수 있게끔 만들어주는 태그. -->
+        <!-- select 태그의 size 속성을 지정하면 자연수의 개수만큼 보여지게 만든다 -->
+        <!-- multiple은 다중선택을 허용할건지 허용하지 않을건지를 정함 -->
+        <!-- select 태그의 하위태그인 option 태그는 목록을 나타내는 태그이다-->
+        <!-- 쉽게 말해 select 라는 박스라는 항목에 option 이라는 해당 박스안에 들어갈 내용이 있다고 생각하면 된다. -->
+        <fieldset style="width:500">
+            <legend>개인 정보 입력(2)</legend>
+                <select name = "city2" size = "5" multiple>
+                    <option value = "seongnam-si">성남시</option>
+                    <option value = "seongnam-si">오남시</option>
+                    <option value = "seongnam-si">충주시</option>
+                    <option value = "seongnam-si">시흥시</option>
+                    <option value = "seongnam-si">메남시</option>
+                    <option value = "seongnam-si">하이시</option>
+                    <option value = "seongnam-si">굿샷시</option>
+                </select>
+                <br><br>
+                
+                <!-- 위의 폼과 다른점은 optgroup을 썼다는 것이다 -->
+                <!-- optgroup은 그룹을 지어줄 수 있는데 앞서 option은 목록을 나타낸다고 했다 -->
+                <!-- 그 목록의 공통점을 묶을 수 있는 태그가 바로 optgroup 이다 -->
+                <select name = "city1" size = "5" multiple>
+                    <!-- 서울 optgroup -->
+                    <optgroup label="서울">
+                        <option value="songpa-gu">송파구</option>
+
+                        <option value="songpa-gu">송파구</option>
+
+                        <option value="songpa-gu">송파구</option>
+
+                        <option value="songpa-gu">송파구</option>
+
+                    </optgroup>
+                    <!-- 경기도 optgrop -->
+                    <optgroup label="경기도">
+                        <option value="hwaseong-si">화성시</option>
+
+                        <option value="hwaseong-si">화성시</option>
+
+                        <option value="hwaseong-si">화성시</option>
+
+                        <option value="hwaseong-si">화성시</option>
+
+                    </optgroup>
+                </select>
+        </fieldset>
+            
+    </form>
+
+    <br><br>
+
+    <form>
+        <fieldset style="width:500;">
+            <legend>개인 정보 입력(3)</legend>
+                <textarea name = "comment" cols = "50" rows="5" placeholder="가입인사를 남겨주세요."></textarea>
+                <br><br>
+                <input type="submit" value="submit"/>
+            </fieldset>
+    </form>
+
+
+    <br><br>
+    <fieldset>
+        <legend>개인 정보 입력(4)</legend>
+            <input type="date" min = "2000-01-01" max = "2030-12-31"/>
+    </fieldset>
+</body>
+</html>

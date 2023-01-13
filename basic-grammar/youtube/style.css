@@ -157,3 +157,7 @@ button, button:focus {
 .channel .metadata {
     display: flex;
 }
+
+.channel .subscribe {
+    justify-content: space-between;
+}

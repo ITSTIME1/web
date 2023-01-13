@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam</title>
+</head>
+<body>
+    <!-- 가장 상단 내용 -->
+    <form>
+        <!-- 고객레이블 -->
+        <label for = "name">고객명 : </label>
+        <input type="text" name = "name" id = "name">
+        <br><br>
+
+        <!-- 전화번호레이블 -->
+        <label for= "phone">전화번호 : </label>
+        <input type="text" name="phone" id="phone" title = "전화 번호를 입력해주세요 ex) 0000-0000-0000">
+        <br><br>
+
+        <!-- e-mail레이블 -->
+        <label for= "email">e-mail : </label>
+        <input type="text" name="email" id="email" title = "이메일을 입력해주세요.">
+        <br><br>
+        
+        <!-- 피자선택 -->
+    
+        <label for="pizza">피자 선택 : </label>
+        <select name="pizza" id = "pizza">
+            <option value="default">피자를 선택하세요</option>
+            <option value="1">치즈 퐁듀 파이어 미트</option>
+            <option value="2">블록버스터4</option>
+            <option value="3">글로벌 레전드4</option>
+            <option value="4">블랙앵거스 스테이크</option>
+            <option value="5">베스트 콰트로</option>
+            <option value="6">블랙타이거 슈림프</option>
+        </select>
+        <br><br> 
+        <!-- 피자 사이즈 필드 -->
+        <fieldset>
+            <legend>피자 사이즈</legend>
+                <input type="radio" name="size" value="S">Small<br>
+                <input type="radio" name="size" value="M">Medium<br>
+                <input type="radio" name="size" value="S">Large
+        </fieldset>
+        <!-- 토핑선택 필드 -->
+        <fieldset>
+            <legend>토핑 선택</legend>
+                <input type="checkbox" name="topping" value="bacon">베이컨<br>
+                <input type="checkbox" name="topping" value="cheese">치즈 추가<br>
+                <input type="checkbox" name="topping" value="onion">양파<br>
+                <input type="checkbox" name="topping" value="mushroom">버섯<br>
+
+        </fieldset>
+        <!-- 희망시간 -->
+        <label for="date">희망배송시간 : </label>
+        <input type="date" name="date" id="date">
+        <br><br>
+        <!-- 배송요청사항 -->
+        <label for="text">배송시 요청사항 : 
+            <textarea name="text" id="text" rows = "5" col = "30"></textarea>
+        </label>
+        <br><br>
+        <button>제출하기</button>
+    </form>
+</body>
+</html>

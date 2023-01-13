@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice(2)</title>
+</head>
+<body>
+    <!-- 궁금한게 id, class, name 
+    
+    무슨차이가 있는 걸까
+    1. id
+        고유한 식별을 목적으로 사용하는 경우가 많다.
+        ex) header 영영과 navbar 영역을 확실하게 구분지어야 하는 경우 id 값의 구분이 반드시 필요로 할때
+        즉 각 태그의 고유 "식별자"가 존재해야 할때 사용하는 속성이다.
+    2. class 
+        재사용을 목적으로 하는 경우 사용한다.
+        ex) css 의 스타일을 일관되게 만들고 싶을때 하나하나 id를 부여하는 것 보다
+        일관되게 하고픈 태그들만 class 속성을 부여해두면 쉽게 정의내릴 수 있게 된다.
+    3. name 
+        form 컨트롤 요소의 값 을 서버로 전송하기 위해 필요한 속성
+        서버의 전송하기 위해 필요로하다..? 이게무슨 뜻이지
+        아 이런거네
+        그니까 select 같은 경우 항목을 만들어서 그 안에 있는 option 값을 유저 쪽에서 선택하게 되면
+        그 선택한 값을 javascript 에서 name 의 이름으로 식별해서 그 선택한 값을 가지고 올 수 있다.
+        그럼 이걸 가지고 서버의 전송하는 기능을 만들 수 있다.
+    -->
+
+
+    <!-- form -->
+    <form>
+        <fieldset>
+            <legend>납품자 정보</legend>
+                <ol>
+                    <!-- 납품자명 -->
+                    <li>
+                        <label for="납품자명">납품자명 : 
+                            <input type="text" name="납품자명" id="납품자명" required>
+                        </label>
+                    </li>
+                    <br>
+                    <!-- 이메일 -->
+                    <li>
+                        <label for="email">이메일 : 
+                            <input type="text" name="email" id="email" required>
+                        </label>
+                    </li>
+                    <br>
+                    <!-- 홈페이지 -->
+                    <li>
+                        <label for="홈페이지">홈페이지 주소 : 
+                            <input type="text" name="납품자명" id="납품자명" required>
+                        </label>
+                    </li>
+                    <br>
+                    <!-- 지역 -->
+                    <li>
+                        <label for="region">지역 : 
+                            <select name="region" id = "region">
+
+                                <option value = "Seoul">서울</option>
+
+                                <option value = "Seoul">경기</option>
+
+                                <option value = "Seoul">인천</option>
+
+                                <option value = "Seoul">충주</option>
+
+                            </select>
+                        </label>
+                    </li>
+                </ol>    
+        </fieldset> <fieldset>
+            <legend>납품자 정보</legend>
+                <ol>
+                    <!-- 납품자명 -->
+                    <li>
+                        <label for="납품자명">납품자명 : 
+                            <input type="text" name="납품자명" id="납품자명" required>
+                        </label>
+                    </li>
+                    <br>
+                    <!-- 이메일 -->
+                    <li>
+                        <label for="email">이메일 : 
+                            <input type="text" name="email" id="email" required>
+                        </label>
+                    </li>
+                    <br>
+                    <!-- 홈페이지 -->
+                    <li>
+                        <label for="홈페이지">홈페이지 주소 : 
+                            <input type="text" name="납품자명" id="납품자명" required>
+                        </label>
+                    </li>
+                    <br>
+                    <!-- 지역 -->
+                    <li>
+                        <label for="region">지역 : 
+                            <select name="region" id = "region">
+
+                                <option value = "Seoul">서울</option>
+
+        <br>
+        <fieldset>
+            <legend>납품 정보</legend>
+                <ul>
+                    <!-- 상품명 -->
+                    <li>
+                        <label for="product">상품명 : 
+                            <input type="text" name="product" id="product">
+                        </label>
+                    </li>
+                    <br>
+                    <!-- 납품수량 -->
+                    <li>
+                        <label for="number">납품수량 : 
+                            <input type="text" name="number" id="number" placeholder="최소 100">
+                        </label>
+                        <br>
+                    </li>
+                    <!-- 납품등급 -->
+                    <br>
+                    <li>
+                        <label for="range">납품등급 :
+                            <input type="range" name="range" id="range">
+                    
+                    </li>
+                    <br>
+                    <!-- 기타사항을 적는 칸 -->
+                    <li>
+                        <label for="etc">기타사항 :
+                            <textarea name="etc" id="etc" rows="5" cols="20"></textarea>
+                    </li>
+                </ul>
+        </fieldset>
+    </form>
+</body>
+</html>
