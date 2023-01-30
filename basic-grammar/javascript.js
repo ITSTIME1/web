@@ -1,4 +1,2 @@
-if (Math.random() > 0.5 ) {
-    const y = 5;
-    console.log(y);
-}
+console.log('Hello Wolrd');
+console.log("good shot");
