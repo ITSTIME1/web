@@ -100,3 +100,12 @@ const a = parseInt(inputData[0])
 const b = parseInt(inputData[1])
 
 console.log(a+b);
+
+const fs = require('fs');
+const inputData2 = fs.readFileSync(0, 'utf-8').toString().split(" ");
+
+const aData = parseInt(inputData2[0]);
+const bData = parseInt(inputData2[1]);
+
+const result = aData-bData;
+console.log(result);

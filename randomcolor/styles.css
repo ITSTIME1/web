@@ -43,6 +43,10 @@
   --fixed-width: 620px;
 }
 
+/* 전체선택자  */
+/* ::after, ::before 는 마지막에 추가해주는 요소들인데
+after 는 말그대로 해당 선택자 뒤에 추가할 요소
+before 는 말그대로 해당 선택자가 시작하기 전에 추가할 요소 */
 *,
 ::after,
 ::before {
@@ -62,10 +66,7 @@ body {
 ul {
     list-style-type: none;
 }
-h1,
-h2,
-h3,
-h4 {
+h1,h2,h3,h4 {
     letter-spacing: var(--spacing);
     text-transform: capitalize;
     line-height: 1.25;
@@ -86,7 +87,13 @@ h4 {
     font-size: 0.875rem;
 }
 
-/* ?? */
+/* 미디어 쿼리는 반응형 웹을 만들때 사용되는 주요키다. */
+/* media type 을 지정해주고 condition을 걸어주면 해당 조건에 부합한다면
+bracket 의 내용이 실행된다. */
+
+/* 아래 미디어 스크린 예제 같은 경우는 최소 너비가 800px로 컨디션을 걸어놨고
+그렇다면 최소너비에 도달했을경우 h1~4까지의 태그들의 폰트사이지들을 변경한다는 내용이 들어있다.
+ */
 @media screen and (min-width: 800px) {
     h1 {
       font-size: 4rem;
@@ -110,23 +117,16 @@ h4 {
       line-height: 1;
     }
   }
-  /*  global classes */
-  
-  /* section */
-  .section {
-    padding: 5rem 0;
-  }
-  
-  .section-center {
-    width: 90vw;
-    margin: 0 auto;
-    max-width: 1170px;
-  }
+  /*  global classes */  
+
   @media screen and (min-width: 992px) {
     .section-center {
       width: 95vw;
     }
   }
+  /* main 태그의 css 속성 */
+
+  /* display 속성은 자식요소를 어떻게 배치할건지 정할때 사용하는 속성이다 */
   main {
     min-height: 100vh;
     display: grid;
@@ -212,5 +212,5 @@ h4 {
   }
   .btn-hero:hover {
     color: var(--clr-white);
-    background: var(--clr-black);
+    background: var(--clr-green-light);
   }
