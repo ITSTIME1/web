@@ -1,0 +1,80 @@
+:root {
+    --main-color: white;
+    --nav-bar-color: blue;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.6;
+    background-color: beige;
+}
+
+.nav-container p:hover {
+    color:aquamarine;
+}
+
+.nav-container {
+    background-color: lightgray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-container p {
+    margin: 2%;
+    font-size: x-large;
+    color:white
+}
+.nav-container ul li {
+    list-style: none;
+    float: left;
+    margin-left: 10pt;
+}
+.nav-container .nav-list li a {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+
+.nav-container .nav-list li a:hover {
+    color: aqua;
+    font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: 1.5;
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  font-family: var(--ff-primary);
+}
+
+
+/* 이부분이 핵심이네 */
+main {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+main h1 {
+    font-size: 500%;
+}
+
+
+main .button-container .btn{
+    font-size: large;
+    border-radius: 14%;
+    border: 2px solid lightcoral;
+    background-color: lightcyan;
+    color: black;
+}
