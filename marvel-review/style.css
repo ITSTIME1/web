@@ -50,12 +50,17 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
+    position: fixed;
+    overflow: hidden;
+    height: 100%;
+    width: 100vw;
     font-family: var(--ff-secondary);
     background: var(--clr-grey-10);
     color: var(--clr-grey-1);
     line-height: 1.5;
     font-size: 0.875rem;
+    overflow: scroll;
 }
 
 .nav-bar-logo {
