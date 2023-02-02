@@ -57,11 +57,12 @@ function rand(min, max) {
 }
 
 img.addEventListener("click", function() {
+    setTimeout(() => {console.log("첫 번째 메시지")}, 2000);
     currentIndex = rand(0, 4)
     var filed = character[currentIndex];
-
     img.src = filed.image;
     charcter_name.textContent = filed.name;
     description.textContent = filed.description;
     power.textContent = filed.power_rate;
+    
 });
