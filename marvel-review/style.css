@@ -119,6 +119,22 @@ body {
     border-radius: 20%;
     margin-bottom: 10%;
 }
+
+.sub-background-container .image-section:hover {
+    width: 100%;
+}
 .sub-background-container #name {
     color: var(--thor-color);
 }
+
+.sub-background-container #power-rate {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.sub-background-container .btn-container {
+    width: 100%;
+    height: 100%;
+}
+
+
