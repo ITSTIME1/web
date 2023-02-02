@@ -12,22 +12,27 @@ const counterNumber = document.getElementById("counter");
 
 var count = 0;
 
-if (parseInt(counterNumber.textContent) < 0) {
-    counterNumber.textContent = "마이너스는 싫어용..";
-}
-
 plusBtn.addEventListener("click", function() {
     counterNumber.textContent = f_sum()
+    if (parseInt(counterNumber.textContent) < 0) {
+        counterNumber.textContent = "마이너스는 싫어용..";
+    }
 });
 
 
 minusBtn.addEventListener("click", function() {
     counterNumber.textContent = f_minus()
+    if (parseInt(counterNumber.textContent) < 0) {
+        counterNumber.textContent = "마이너스는 싫어용..";
+    }
 });
 
 
 multipleBtn.addEventListener("click", function() {
     counterNumber.textContent = f_multi()
+    if (parseInt(counterNumber.textContent) < 0) {
+        counterNumber.textContent = "마이너스는 싫어용..";
+    }
 });
 
 function f_sum() {
