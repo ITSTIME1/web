@@ -9,10 +9,7 @@
     --max-width: 1170px;
     --fixed-width: 620px;
     --thor-color : hsl(230, 100%, 72%);
-.image-section-height: 65vh;
-.image-section-height) / 1.5);
-3 }
-
+}
 *,
 ::after,
 ::before {

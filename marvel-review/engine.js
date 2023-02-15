@@ -38,6 +38,9 @@ const img = document.getElementById("character-image");
 const charcter_name = document.getElementById("name");
 const description = document.getElementById("description");
 const power = document.getElementById("power-rate");
+const contact = document.getElementById("contact");
+const github = document.getElementById("github");
+
 
 let currentIndex = 0;
 
@@ -65,4 +68,12 @@ img.addEventListener("click", function() {
     description.textContent = filed.description;
     power.textContent = filed.power_rate;
     
+});
+
+contact.addEventListener("click", function() {
+    alert("itstime0809@gmal.com");
+});
+
+github.addEventListener("click", function() {
+    alert("itstime");
 });
