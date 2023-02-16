@@ -12,12 +12,20 @@ const thirdTextLength = document.getElementById("third-text-length");
 
 
 const REST_API_KEY = '4c62bd862e78e1365f336d5a51e12cd3'
-const url = 'https://api.kakaobrain.com/v1/inference/kogpt/generation';
-const max_tokens = 12;
+const urlString = 'https://api.kakaobrain.com/v1/inference/kogpt/generation';
+
+const max_tokens = 32;
 const temperature = 1.0;
 const top_p = 1.0;
 const n = 1;
 
+const data = {
+    prompt: "대한민국의 수도는",
+    max_tokens: max_tokens,
+    temperature: temperature,
+    top_p: top_p,
+    n: n
+}
 
 
 // firstText counter
@@ -40,27 +48,46 @@ thirdQuestion.addEventListener("input", (e) => {
 });
 
 
+// when submit button click occur "post"
 submitBtn.addEventListener("click", () => {
-
-    let textMessage = "";
-    fetch('https://api.kakaobrain.com/v1/inference/kogpt/generation', {
-    method: 'POST',
-    mode: 'cors', // no-cors, *cors, same-origin
-    headers: {
-        "Authorization": "KakaoAK " + REST_API_KEY, 
-        "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-        prompt: "대한민국의 수도는 어떤 곳이야?",
-        max_tokens: max_tokens,
-        temperature: temperature,
-        top_p: top_p,
-        n: n
-    }),
-  }).then((response) => {
-    response.textContent = data.body;
+    postData('https://api.kakaobrain.com/v1/inference/kogpt/generation', data)
+  .then((data) => {
+    // received parsed data
+    // why null
+    if(data != null) {
+        console.log(data);
+        console.log("null is not");
+    }
+  }).catch ((error) => {
+    console.error("failure", error);
   });
 });
+
+async function postData(url = "", data = {}) {
+    console.log(location.origin + "location origin");
+    // post data url success
+    console.log(url + "post data url");
+    // data success
+    console.log(data);
+
+    const response = await fetch(url, {
+      method: 'POST', 
+      mode: 'cors',
+      headers: {
+        'Authorization': 'KakaoAK ' + REST_API_KEY,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data) // body data type must match "Content-Type" header
+    });
+    // 여기서 파스한거네
+    return response.json(); // parses JSON response into native JavaScript objects
+  }
+  
+//   postData('https://example.com/answer', { answer: 42 })
+//     .then((data) => {
+//       console.log(data); // JSON data parsed by `data.json()` call
+//     });
+  
 
 
 
