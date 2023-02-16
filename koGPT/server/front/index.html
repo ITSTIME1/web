@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="engine.js" defer></script>
+    <title>koGPT</title>
+</head>
+
+<body class="body-container">
+    <header class="main-header">
+        <div class="logo-container">
+            <h1>koGPT GUI</h1>
+        </div>
+    </header>
+
+    <section class="middle-container">
+        <div class="question-container">
+            <div class="question-class">
+                <h2>어떤 형태로 표현할까요?</h2>
+                <input id="first-question" type="text" placeholder="문장에서 의미하는 나라를 한 단어로 표현합니다.">
+                <div class = "text-length-class">
+                    <p id="first-text-length">0</p>
+                    <p class="text-length-max">/300</p>
+                </div>
+            </div>
+
+            <div class="question-class">
+                <h2>간단하게 설명해주세요.</h2>
+                <input id="second-question" type="text" placeholder="북아메리카 대륙과 태평양 지역에 위치한 연방국이자 세계 유일의 초강대국이다. 정답 : 미국">
+                <div class = "text-length-class">
+                    <p id="second-text-length">0</p>
+                    <p class="text-length-max">/300</p>
+                </div>
+            </div>
+            
+            <div class="question-class">
+                <h2>궁금한 내용을 입력해주세요.</h2>
+                <input id="third-question" type="text" placeholder="달러를 기축통화로 가지고 있는 나라는 어디야?">
+                <div class = "text-length-class">
+                    <p id="third-text-length">0</p>
+                    <p class="text-length-max">/300</p>
+                </div>
+            </div>
+        </div>
+        <p id = "response">여기로 표시해보자</p>
+    </section>
+
+
+
+    <section class="submit-class">
+        <form action = "localhost:3000" method="POST">
+            <button id="submit-btn", type="submit">분석</button>
+        </form>
+    </section>
+
+
+    <footer class="footer-container">
+        
+    </footer>
+</body>
+</html>
