@@ -19,13 +19,6 @@ const temperature = 1.0;
 const top_p = 1.0;
 const n = 1;
 
-const data = {
-    prompt: "대한민국의 수도는",
-    max_tokens: max_tokens,
-    temperature: temperature,
-    top_p: top_p,
-    n: n
-}
 
 
 // firstText counter
@@ -48,8 +41,26 @@ thirdQuestion.addEventListener("input", (e) => {
 });
 
   
-// submitBtn.addEventListener("click", (e) => {
-//     console.log(firstQuestion.value);
-//     console.log(secondQuestion.value);
-//     console.log(thirdQuestion.value);   
-// });
+submitBtn.addEventListener("click", (e) => {
+
+    let message = firstQuestion.value + " " + secondQuestion.value + " " + thirdQuestion.value;
+    
+    const data = {
+        key : message,
+    }
+
+    console.log(data);
+    fetch("/result", {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    }).then((response) => response.json())
+    .then((data) => {
+      console.log('Success:', data);
+    }).catch((error) => {
+        console.error('Error:', error);
+    });
+      
+});
