@@ -51,6 +51,10 @@ app.get('/2000', (req, res) => {
     res.sendFile(__dirname + "/front/index.html");
 });
 
+// request model continude....
+
+
+
 // request.post(options, (error, response, body)=>{
 //     console.log(body);
 // });
