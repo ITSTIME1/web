@@ -77,9 +77,8 @@
     outline: none;
     border-color: rgb(255, 232, 18);
 }
-.submit-class {
-    text-align: center;
-    margin: 10%;
+#submit-btn {
+    margin-bottom: 10%;
 }
 
 

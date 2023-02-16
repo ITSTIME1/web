@@ -47,52 +47,9 @@ thirdQuestion.addEventListener("input", (e) => {
     thirdTextLength.innerText = characterCount;
 });
 
-
-// when submit button click occur "post"
-
-// 이부분을 nodejs 서버로 요청한다음
-// 이 parameter 만 받고 나머지 부분은 nodejs 서버에서 -> 카카오 api 호출 하면 될거 같은데.
-// submitBtn.addEventListener("click", () => {
-//     postData('https://api.kakaobrain.com/v1/inference/kogpt/generation', data)
-//   .then((data) => {
-//     // received parsed data
-//     // why null
-//     if(data != null) {
-//         console.log(data);
-//         console.log("null is not");
-//     }
-//   }).catch ((error) => { 
-//     console.error("failure", error);
-//   });
+  
+// submitBtn.addEventListener("click", (e) => {
+//     console.log(firstQuestion.value);
+//     console.log(secondQuestion.value);
+//     console.log(thirdQuestion.value);   
 // });
-
-// async function postData(url = "", data = {}) {
-//     console.log(location.origin + "location origin");
-//     // post data url success
-//     console.log(url + "post data url");
-//     // data success
-//     console.log(data);
-
-//     const response = await fetch(url, {
-//       method: 'POST', 
-//       mode: 'cors',
-//       headers: {
-//         'Authorization': 'KakaoAK ' + REST_API_KEY,
-//         'Content-Type': 'application/json'
-//       },
-//       body: JSON.stringify(data) // body data type must match "Content-Type" header
-//     });
-//     // 여기서 파스한거네
-//     return response.json(); // parses JSON response into native JavaScript objects
-//   }
-  
-//   postData('https://example.com/answer', { answer: 42 })
-//     .then((data) => {
-//       console.log(data); // JSON data parsed by `data.json()` call
-//     });
-  
-
-
-
-
-                        

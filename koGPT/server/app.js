@@ -5,6 +5,7 @@ var cors = require("cors")
 
 var app = express()
 app.use(cors());
+app.use(express.urlencoded({extended: true})) 
 
 
 
@@ -42,15 +43,25 @@ var options = {
 app.use(express.static('front'));
 // init
 app.listen(3000, () => {
-    console.log("start server and port is 3000.");    
+    console.log("start server and port is 3000.");   
+    console.log("3000");
+
 });
 
 // get front
 app.get('/2000', (req, res) => {
     res.sendFile(__dirname + "/front/index.html");
-    request.post(options, (error, response, body)=>{
-        console.log(body);
-    });
+    // request.post(options, (error, response, body)=>{
+    //     console.log(body);
+    // });
+});
+
+
+// post 요청의 대한 처리.
+app.post('/result', (req, res) => {
+    // 클라이언트로부터 받은 요청.
+    console.log(req.body);
+    res.sendFile(__dirname + "/front/result.html");
 });
 
 // request model continude....
