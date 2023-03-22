@@ -3,6 +3,8 @@
 // 추가적으로 keyframe 을 사용해서 효과를 넣기
 // 뭔가 허접한가..?
 
+var test = true;
+console.log(test);
 const character = [
     {
         id: 1,
@@ -55,6 +57,35 @@ window.addEventListener("DOMContentLoaded", function() {
 });
 
 
+var player_handle = function(is) {
+    var good = is;
+    console.log("여기가 player_handle");
+    console.log(good);
+}
+
+var player = function () {
+    var is_sample = false;
+	var save_interval = 5000;
+	var record_time = 0;
+	var is_save = true;
+	var is_next = false;
+    console.log("처음");
+    console.log(is_sample);
+
+    return {
+        // 필요한 값들 초기화
+		init : function(hello){			
+            
+			if(is_sampled){
+				is_sample = true;
+			}
+			player_handle(is_sample);
+            is_sample = true;
+			
+		}
+	}
+
+}
 function rand(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }

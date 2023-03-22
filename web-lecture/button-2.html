@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>배송 정보</legend>
+            <lable>주문번호<input type="text" name="no" value="a08-2302" disabled></lable><br>
+            <lable>주문자<input type="text" name="user" autocomplete="off" autofocus required></lable><br>
+            <lable>배송국<input type="text" name="nation" value="a08-2302" disabled></lable>
+            <lable>d<input type="text" name="no" value="a08-2302" readonly></lable>
+
+            ^ = 처음 0으로 시작
+            d{} = 하나 또는 두개
+            d[3,4] = 3개 또는 4개
+            010-9755-4185
+            "^0\d{1,2}-\d{3,4}\d{4}"
+        </fieldset>
+    </form>
+</body>
+</html>
