@@ -1,0 +1,17 @@
+h1 {
+    padding: 10px;
+    background-color: rgb(145, 8, 8);
+    /* 두개의 하나 값을 나타내는게 동일한 경우 한가지만 써도 인식 */
+    color: #fff;
+}
+
+p {
+    font-style: italic;
+}
+
+.accent{
+    background-color: blue;
+}
+.bg {
+    color:black;
+}

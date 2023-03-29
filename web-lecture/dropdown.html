@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>상품 선택</h3>
+    <fieldset>
+        <legend>
+            상품</legend>
+        <form action = "">
+            <!-- multiple 여러가지를 선택할 수 있도록 만들어주는 기능 -->
+            <!-- size는 화면에 보여줄 아이템의 개수 -->
+            <select name="product" size=4 multiple>
+                <option value="special+3" selected>선물용 3kg</option>
+                <option value="special+5">선물용 5kg</option>
+                <option value="family+3" >가정용 3kg</option>
+                <option value="family+5" >가정용 5kg</option>
+            </select>
+            <br><br>
+            <select name="game" size=5>
+                <optgroup label="선물용">
+                    <option value="game_1">게임1</option>
+                    <option value="game_2">게임2</option>
+                </optgroup>
+                <optgroup label="개인용">
+                    <option value="game_3">게임3</option>
+                    <option value="game_4">게임4</option>
+                </optgroup>
+            </select>
+
+            <br>
+            <input type="text" name="browser" list="select_browser">
+
+            <datalist id="select_browser">
+                <option value="사파리" label="safari"></option>
+                <option value="dd" label="ff"></option>
+                <option value="ddd" label="d"></option>
+                <option value="dddd" label="fgg"></option>
+            </datalist>
+        </form>
+    </fieldset>
+</body>
+</html>
