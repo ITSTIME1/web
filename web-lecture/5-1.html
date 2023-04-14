@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>배송 정보</legend>
+            <label>주문번호 <input type="text" name="no" disabled></label>
+            <label>주문자 <input type="text" name="user" autocomplete="off" autofocus required></label>
+            <label>배송국 <input type="text" name="nation" value="대한민국" readonly></label>
+            <lable>연락처 <input type="tel" name="phone" placeholder="하이픈 없이 입력하세요"></lable>
+
+            <input type="submit" value="주문하기">
+            
+        </fieldset>
+
+
+        <h4>상품선택</h4>
+        <fieldset>
+            <legend>상품</legend>
+            <select name="product">
+
+                <optgroup label="선물용">
+                    <option value="special_3" selected>선물용 3kg</option>
+                    <option value="special_5" >선물용 3kg</option>
+                </optgroup>
+
+                <optgroup label="가족용">
+                    <option value="family_3" >가족용 3kg</option>
+                    <option value="family_5" >가족용 5kg</option>
+                </optgroup>
+
+                
+                <!-- option의 개수에는 제한이 없다라는거 -->
+                <!-- option에 따라서 그룹을 지을 수 있지  -->
+                <!-- 가족용 하위에 여러목록이 있고 -->
+                <!-- 개인용 하위에 여러목록이 있듯이 -->
+
+            </select>
+            <input type="submit" value="보내기">
+
+
+            <fieldset>
+                <legend>웹브라우저</legend>
+                <br>
+                <input type="text" name="browser" list="selected_browser">
+                <datalist id="selected_browser">
+                    <option value="인터넷 익스플로러" label="IE">
+                        
+                    </option>
+                </datalist>
+            </fieldset>
+
+            <fieldset>
+                <legend>이메일 선택</legend>
+                
+                <input type="text" name="mail" list="select_email" size="30" multiple = "3">
+
+                <datalist id="select_email">
+                    <option value="itstime@gmail.com" value = "gmail"></option>
+                </datalist>
+
+            
+
+        </fieldset>
+        <div>button</div>
+        <button type="submit">주문하기</button>
+    </form>
+
+</body>
+</html>

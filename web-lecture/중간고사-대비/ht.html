@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="order" method="get">
+        <label>고객명 : <input type="text" required size="20" autofocus placeholder="정확히기입"></label>
+        <br>
+        <label>전화번호 : <input type="tel" required size="20"></label>
+        <br>
+        <label>E-mail: <input type="email" size="20"></label>
+        <br>
+        <label>피자 선택 : 
+            <select name = "pizza" size="1">
+                <option value = "s" selected>S사이즈</option>
+                <option value = "m">M사이즈</option>
+                <option value = "l">L사이즈</option>
+
+            </select>
+        </label>
+        <br>
+        <fieldset>
+            <legend>피자 사이즈</legend>
+            <!-- radio 속성은 그냥 name 속성을 동일하게 주지않으면 다중선택이됨 -->
+            <input type="radio" value="cs" name = "size"> Small<br>
+            <input type="radio" value="cm" name = "size"> Medium<br>
+            <input type="radio" value="cl" name = "size"> Large<br>
+        </fieldset>
+
+        <fieldset>
+            <legend>토핑 선택</legend>
+            <input type="checkbox" name="topping"> 베이컨<br>
+            <input type="checkbox" name="topping"> 치즈<br>
+            <input type="checkbox" name="topping">양파<br>
+            <input type="checkbox" name="topping">버섯<br>
+        </fieldset>
+    
+
+
+        <label>희망 배송시간 : <input type="time"></label><br>
+        <label>배송시 요청사항 : <textarea cols="30" rows="5" wrap="on"></textarea></label><br>
+        <input type="submit" value="제출하기">
+    </form>
+</body>
+</html>

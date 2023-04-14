@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- form 태그는 서버의 데이터를 전송할때 사용하는 태그가 되는데 -->
+    <!-- 속성값으로 name을 지정하게되는데 그 이유는 한 문서내에 여러 form이 존재할 경우 구분하기 위해서다. -->
+    <!-- method 는 통신 방식을 지정하는건데 get, post 방식이 존재. -->
+
+
+    <!-- get 방식으로 데이터를 보내게 될 경우 url에 전달할 데이터들이 전부 노출이 되게 됨. -->
+    <!-- 따라서 비교적 보안이 좋지 않음. -->
+    <!-- 전달하는 데이터의 양에 제한이 존재함. -->
+    <!-- 폼의 요소를 전달하는데는 사용하지 않음 -->
+
+    <!-- 그와 반면에 post는 url에 보내고자 하는 데이터들이 노출되지 않으며 비교적 get 방식보다 안전함 -->
+    <!-- 보내는 데이터의 제한이 없음 -->
+    <!-- 폼의 요소를 보내기에 적합. -->
+
+
+    <!-- action 태그는 폼의 입력된 데이터들을 보낼때 서버쪽 어디로 보낼지 지정하는 태그가 됨. -->
+
+    <!-- target 속성은 액션에서 지정한 문서의 내용을 현재의 윈도우가 아닌 새창의 윈도우에서 열리도록한다. -->
+    <!-- <form name="login" method="post" action="/sfaf/af" target="_blank"
+     -->
+     <!-- form 태그를 사용해서 서버에 보낼 폼 데이터를 구성 -->
+    <form method="get">
+        <!-- 만들 폼데이터가 많을 수 있기 때문에 fieldset을 써서 영역을 지정 -->
+        <fieldset>
+            <!-- legend를 사용해서 fieldset의 제목을 지정 -->
+            <!-- fieldset을 사용할 경우 테두리로 표현하게 됨 -->
+            <legend>여기는 로그인</legend>
+            <label>아이디:<input type="text" name="user_id" size="10"></label>
+            비밀번호:<input type="password" name="user_ps" size="10">
+            <input type="submit" value="로그인">
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <!-- min, max가 설정되지 않았을 경우 -->
+            <!-- 숫자가 입력되었는지만 검사. -->
+            <input type="number" max="10" min="1" value="1" step="2">
+        </fieldset>
+
+        <br>
+        <input type="range" min="1" max="100" value="1" step="3">
+        <!-- 위 처럼 method 방식을 get 방식으로 설정했을때 -->
+        <!-- 보안이 post방식보다 비교적 취약하다고 했음 그 이유가 url에 보내고자 하는 데이터가 다 노출되기 때문에 -->
+        <!-- 이때 action으로 지정된 서버의 문서 위치로 보낼건데 그때 get 방식을 사용했기 때문에 name의 값에 내가 입력했던 id 값이 들어가게되고 -->
+        <!-- user_ps 라고 정의해두었던 name 값에다가는 패스워드가 들어가게 되면서 url에 표시되게된다. -->
+        <!-- http://127.0.0.1:3000/5.html?user_id=itstime&user_ps=asdf123 -->
+    </form>
+</body>
+</html>

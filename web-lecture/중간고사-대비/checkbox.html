@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="get">
+        <fieldset>
+            <legend>상품주문</legend>
+            <!-- value값이 name변수에 들어가는거지 -->
+            <!-- gift1 = s1 & gift1 = s2 -->
+            <input type="checkbox" name="gift1" value="s1">선물용3kg
+            <input type="checkbox" name="gift2" value="s2">선물용5kg
+            <input type="submit" value="제출">
+
+            <input type="text" value="하이">
+            <input type="text" placeholder="하이">
+
+            <select name="product" size=2 multiple>
+                <option value="choice1">선물</option>
+                <option value="choice1">선물</option>
+                <option value="choice1">선물</option>
+                <option value="choice1">선물</option>
+                <option value="choice1">선물</option>
+
+            </select>
+
+            <input type="email" list="dataBrowser" multiple>
+            <datalist id="dataBrowser">
+                <optgroup label="웹브라우저">
+                    <option value="1">크롬</option>
+                    <option value="2">빙</option>
+                    <option value="3">엣지</option>
+                </optgroup>
+            </datalist>
+        </fieldset>
+    </form>
+</body>
+</html>

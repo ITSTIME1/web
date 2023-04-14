@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>필수 입력 사항</legend>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <td><input type="text"></td>
+                    <td><input type="button" value="중복검사"></td>
+
+                </tr>
+                <tr>
+                    <th>비밀번호</th>
+                    <td><input type="password" placeholder="영문, 숫자, 특수문자 포함"></td>
+                </tr>
+                <tr>
+                    <th>비밀번호 확인</th>
+                    <td><input type="text"></td>
+
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td><input type="email" list="selectList"></td>
+                    <td>
+                        <datalist id="selectList">
+                            <option value="gmail.com" label="gmail"></option>
+                            <option value="naver.com" label="naver"></option>
+                            <option value="daum.net" label="daum"></option>
+                        </datalist>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>추가 정보</legend>
+            <label>프로필사진 <input type="file" name="파일 선택" value="file"></label><br>
+            <label>성별: 
+                <input type="radio" name="gender">남자
+                <input type="radio" name="gender">여자
+            </label>
+            <br>
+            <label>생년월일 <input type="date"></label>
+            
+            <br>
+            <label>취미</label><br>
+            <input type="checkbox" name="favorite">야구
+            <input type="checkbox" name="favorite">축구
+            <input type="checkbox" name="favorite">농구
+            <input type="checkbox" name="favorite">프로그래밍
+            <input type="checkbox" name="favorite">게임
+            <br>
+            <input type="checkbox" name="favorite">기타
+            <input type="text" name="favorite" size="30">
+        
+            <br><br>
+            <label>자기소개</label>
+            <br>
+            <textarea cols="40" rows="5"></textarea>
+            
+        </fieldset>
+        <input type="submit" value="회원가입">
+        <input type="reset" value="다시입력">
+        <input type="submit" value="이전으로">
+
+    </form>
+</body>
+</html>
