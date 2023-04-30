@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://goog~~~');
+        h1 {color:aquamarine}
+        /* 이렇게 태그.클래스선택자로 지정하게 되면
+            해당 태그 즉 h1태그에만 이 클래스 선택자가 적용될 수 있다는 뜻이됨.
+            예시를 들어 p에도 클래스 선택자를 적용했는데
+            그 클래스에는 fontClass가 적용되지 않았음
+            때문에 특별히 지정할 값을 명시해주는 역할이됨.
+        */
+        h1.fontClass {
+            color:bisque
+        }
+
+        #Good {
+            color: blue;
+            font-size : 15px;
+            font-variant: small-caps;
+            line-height: 200%;
+        }
+        a {
+            text-decoration-color:red;
+            text-decoration-line:line-through;
+            text-decoration-style:dashed;
+        }
+        
+    </style>
+</head>
+<body link="blue" vlink="red" alink="yellow">
+    <h1 class="fontClass">Exercise 2: Image Searching WebSite</h1>
+    <hr>
+    <p id="Good">Search your Image here: <input type="search">&nbsp;<input type="button" value="Search"></p>
+    <img src="images/쿵푸팬더.png" width="50%" alt="쿵푸팬더"><br>
+    <a href="#">For more click here</a>
+    <hr>
+    <p class="fontClass">Feedback Form:</p>
+    <form method="get" name="inputForm" action="#">
+        <label for="userName">Name :</label>
+        <input type="text" name="userId" id = "userName" size="20" required placeholder="이름" autofocus>
+        <br>
+        <label for="userDate">Date : </label>
+        <input type="date" name="userDate"id="userDate">
+        <br>
+        <label for="Comment">Comment: </label><br>
+        <textarea cols="40" id="Comment" name = "comment" rows="10" wrap="on"></textarea>
+        
+        <input type="button" value="Submit">    
+    </form>
+</body>
+</html>

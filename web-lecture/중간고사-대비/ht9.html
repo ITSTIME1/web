@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            /* 만약에 중앙에 문서 전체를 가운데로 오게 하고 싶다면
+                너비가 설정 되어 있어야함.
+            */
+            width : 600px;
+            border: 1px solid hsl(0, 0%, 13%);
+            margin: 0 auto;
+        }
+        /* div자체에 border랑 container의 보더랑 겹치기 때문에 */
+        /* 가장 바깥에 container border값을 지워버린것. */
+        #description {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="container">
+        <div id = "description">
+            <h1>레드향</h1>
+            <p>푸른초원 드넓은 평야</p>
+        </div>
+
+        <div id = "cpation">
+            <h1>레드향</h1>
+            <p>푸른초원 드넓은 평야</p>
+        </div>
+        
+        <div id = "footer">
+            <h1>레드향</h1>
+            <p>푸른초원 드넓은 평야</p>
+        </div>
+
+        
+    </div>
+</body>
+</html>

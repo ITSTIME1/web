@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            font-size:20px;
+            text-indent:5%;
+        }
+        .spacing1 {
+            letter-spacing: 0.5em;
+        }
+        .spacing2 {
+            /* letter-spacing은 문자사이의 간격을 조정하는것으로 */
+            /* word-spacing은 두단어 이상일때 단어와 단어 사이의 간격을 지정한다. */
+            /* 한마디로 띄어쓰기의 간격을 의미한다고 보면된다. */
+
+            letter-spacing: 0.4em;
+            word-spacing: 2em;
+        }
+        #hello {
+            list-style-image: url(images/쿵푸팬더.png);
+        }
+
+    </style>
+</head>
+<body>
+    <p>HTML</p>
+    <p class="spacing1">Hello</p>
+    <p class="spacing2">Hello nice</p>
+    <p>HELoooooooooooooooo.</p>
+    <p>Hihihihiihihihihi.</p>
+    <p>asdfasdfasdf</p>
+
+    <ol id="hello">
+        <li>h</li>
+        <li>d</li>
+        <li>f</li>
+    </ol>
+</body>
+</html>

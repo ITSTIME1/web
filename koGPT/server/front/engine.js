@@ -11,9 +11,6 @@ const thirdTextLength = document.getElementById("third-text-length");
 
 
 
-const REST_API_KEY = '4c62bd862e78e1365f336d5a51e12cd3'
-const urlString = 'https://api.kakaobrain.com/v1/inference/kogpt/generation';
-
 const max_tokens = 32;
 const temperature = 1.0;
 const top_p = 1.0;

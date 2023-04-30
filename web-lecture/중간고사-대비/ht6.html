@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin : 0;
+            padding : 0;
+        }
+        table {
+            /* border-spacing 속성은 html에서의 cellspacing과 같은 역할을 하며
+            셀과 셀과의 간격을 조절하는데 사용되는데 이떄 css에서 border-spacing을 지정하게 된다면
+            한개의 크기와 두개의 크기로 가질 수 있는데
+            1. 한가지 크기만을 가질경우 좌우 상하 둘다 같은 크기를 갖게 되고
+            2. 두가지 크기를 지정한다면 첫번째에는 좌우 두번쨰 크기는 상하를 잡는다.
+
+
+            단 이 셀의 간격을 지정할때 border-collapse 속성이 seperate일때만 작동하고
+            collpase일떄는 작동하지 않는다.
+            
+            */
+
+            border-collapse: separate;
+            margin:10px;
+            caption-side: top;
+            border : 3px solid red;
+            empty-cells: show;
+        }
+        td{
+            text-align: center;
+            vertical-align: bottom;
+            border : 1px solid black;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <H2>상품구성</H2>
+    <table border cellspacing="10">
+        <caption>상품목록 표</caption>
+        <tr>
+            <th>상품</th>
+            <th>가격<small>(원단위)</small></th>
+            <th>상품명</th>
+            <th>상품코드</th>
+        </tr>
+        <tr>
+            <td>마우스</td>
+            <td>10000</td>
+            <td>제닉스키보드</td>
+            <td>G513</td>
+        </tr>
+        <tr>
+            <td>키보드</td>
+            <td>10000</td>
+            <td>제닉스마우스</td>
+            <td>G12323</td>
+        </tr>
+        <tr>
+            <td>USB</td>
+            <td>10000</td>
+            <td>제닉스마우스</td>
+           
+        </tr>
+    </table>
+    
+</body>
+</html>

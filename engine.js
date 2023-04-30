@@ -1,3 +1,5 @@
+var red = 1000;
+
 var player = function(){
     // is_sample 불리언
 	var is_sample = false;
